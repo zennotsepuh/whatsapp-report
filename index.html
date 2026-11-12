@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>WA REPORT TOOL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">WA<span>REPORT</span></div>
+  <div class="version">VERSION 1.0</div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="label">WHATSAPP REPORT ASSISTANT</span>
+    <h1>REPORT<br><span>ASSISTANT</span></h1>
+    <p>Alat bantu dokumentasi dan pelaporan penyalahgunaan WhatsApp melalui jalur resmi.</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <small>TOTAL RIWAYAT</small>
+      <h2 id="total">0</h2>
+    </div>
+    <div class="stat">
+      <small>STATUS</small>
+      <h2>READY</h2>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>01 / FORM LAPORAN</h3>
+
+    <label>Nomor WhatsApp</label>
+    <input id="number" placeholder="Contoh: 628123456789">
+
+    <label>Kategori pelanggaran</label>
+    <select id="category">
+      <option value="">Pilih kategori</option>
+      <option>Spam atau pesan tidak diinginkan</option>
+      <option>Penipuan</option>
+      <option>Impersonasi atau penyamaran</option>
+      <option>Ancaman atau pelecehan</option>
+      <option>Akun mencurigakan</option>
+      <option>Lainnya</option>
+    </select>
+
+    <label>Alasan laporan</label>
+    <textarea id="reason" placeholder="Jelaskan kejadian dan bukti yang kamu miliki..."></textarea>
+
+    <button class="primary" onclick="saveReport()">SIMPAN LAPORAN</button>
+    <button class="secondary" onclick="officialReport()">BUKA PUSAT BANTUAN WHATSAPP</button>
+  </section>
+
+  <section class="panel">
+    <h3>02 / RIWAYAT LAPORAN</h3>
+    <div id="history">
+      <p class="empty">Belum ada riwayat laporan.</p>
+    </div>
+    <button class="delete" onclick="clearHistory()">HAPUS SEMUA RIWAYAT</button>
+  </section>
+
+  <section class="notice">
+    <b>PERINGATAN</b>
+    <p>Aplikasi ini tidak mengirim laporan secara otomatis dan tidak dapat menjamin akun akan diblokir. Semua laporan harus berdasarkan kejadian nyata dan bukti yang benar.</p>
+  </section>
+</main>
+
+<footer>WA REPORT TOOL © 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>
